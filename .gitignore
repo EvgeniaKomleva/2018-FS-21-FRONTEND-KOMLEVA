@@ -1,7 +1,7 @@
-dea
+idea
 .json
 .config.js
-node_modules/.
 node_modules/
-dist/.
+node_modules
+dist
 
