@@ -1,23 +1,4 @@
-<!--<html>
- <head>
- <style>
-   h1 {
-    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
-    font-size: 2000%; /* Размер шрифта в процентах */
-       background-color: #3366CC;
-	font-style: italic; 
-   }
-  </style>
-  <script src="./dist/main.js"></script>
- </head>
- <body>
-      <div class = "test">
-          <h1>Ботай:3</h1>
 
-      </div>
-      <script src="./dist/main.js"></script>
- </body>
-</html>-->
 <html>
      <head>
         <link href="./static/css/bootstrap.css" rel="stylesheet">
@@ -26,10 +7,10 @@
         <title>Ботай</title>
 	<style>
    	h1 {
-    		font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
+    		font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */
     		font-size: 200%; /* Размер шрифта в процентах */
        		background-color: #AFEEEE;
-		font-style: italic; 
+		font-style: italic;
    	}
  	</style>
      </head>
@@ -46,10 +27,34 @@
 			 	<h1>Хорошего дня,</h1>
 		            <log-in-form acion="/"></log-in-form>
 		        </div>
+				
+			<div class="col-sm-12 col-md-3 align-content-center mb-5">
+		        	<div class="row">
+		        		<div class="col-sm"></div>
+		        		<div class="col-sm">
+		        			<drop-zone></drop-zone>
+		        		</div>
+		        		<div class="col-sm"></div>
+		        	</div>
+		        	<div class="row mt-5">
+		        		<div class="col">
+			        		<form class="gps-button" action="/">
+			        			<input class="btn btn-warning" type="submit" value="GPS">
+			        		</form>
+			        	</div>
+			        </div>
+			        <div class="row mt-2">
+			        	<div class="col">
+				        	<div class="gps-info mt-2">
+				        	</div>
+				        </div>
+			        </div>
+		        </div>
 	    	</div>
 	    </div>
+	<script src="./dist/main.js"></script>
         <script src="./static/js/jquery-3.3.1.js"></script>
 	<script src="./static/js/bootstrap.js"></script>
 	<script src="./static/js/typeahead.bundle.js"></script>
-	</body>	
+	</body>
 </html>
