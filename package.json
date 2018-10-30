@@ -1,34 +1,31 @@
 {
-  "name": "frontend",
+  "name": "track_frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Darayavaus/tehnotrack_frontend.git"
+    "build": "webpack",
+    "start": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Darayavaus/tehnotrack_frontend/issues"
-  },
-  "homepage": "https://github.com/Darayavaus/tehnotrack_frontend#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.2",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0"
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "package.json": "^2.0.1"
+    "css-loader": "^1.0.0",
+    "get": "^1.4.0",
+    "node-report": "^2.2.1",
+    "to": "^0.2.9"
   }
 }
