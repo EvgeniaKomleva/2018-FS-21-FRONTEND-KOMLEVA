@@ -1,6 +1,5 @@
 import bootstrapStyles from '../../static/css/bootstrap.css'
 
-
 const template = `
 	<style>${bootstrapStyles.toString()}</style>
 	<form>
@@ -11,6 +10,7 @@ const template = `
 		<input class="btn btn-primary float-sm-none float-md-right" type="submit">
 	</form>
 `;
+
 class MessageForm extends HTMLElement {
 	constructor () {
 		super();
@@ -71,8 +71,6 @@ class MessageForm extends HTMLElement {
 	}
 }
 
-customElements.define('message-form', MessageForm);
-
 
 class LogInForm extends HTMLElement{
 	constructor () {
@@ -80,11 +78,11 @@ class LogInForm extends HTMLElement{
 		const shadowRoot = this.attachShadow({mode: 'open'});
 		shadowRoot.innerHTML = `
 			<style>${bootstrapStyles.toString()}</style>
-			<h5 class="logged_in">Anonymus</h5>
-			<form>
-	            <div class="form-group">
-	                <input class="form-control" placeholder="username" name="username">
-	            </div>
+			<form class="mt-5">
+				<h5 class="logged_in">Anonymous</h5>
+        <div class="form-group mt-2">
+          <input class="form-control" placeholder="username" name="username">
+        </div>
 				<input class="btn btn-primary float-sm-none float-md-right" type="submit" value="Log in"> 
 			</form>
 		`;
@@ -108,12 +106,12 @@ class LogInForm extends HTMLElement{
 		var localStorage = window.localStorage;
 		var loggedin = this.shadowRoot.querySelector('.logged_in');
 		var user = this.shadowRoot.querySelector('.form-control');
-		localStorage.setItem('user', 'Anonymus')
+		localStorage.setItem('user', 'Anonymous')
 		this._elements = {
 			form: form,
 			localStorage: localStorage,
-			loggedin : loggedin,
-			user : user
+			loggedin: loggedin,
+			user: user
 		};
 	}
 
@@ -124,6 +122,7 @@ class LogInForm extends HTMLElement{
 	_onSubmit (event) {
 		this._elements.localStorage.setItem('user', this._elements.user.value);
 		this._elements.loggedin.innerText = this._elements.user.value;
+		this._elements.user.value = "";
 		event.preventDefault();
 		return false;
 	}
@@ -132,3 +131,4 @@ class LogInForm extends HTMLElement{
 }
 
 customElements.define('log-in-form', LogInForm);
+customElements.define('message-form', MessageForm);
